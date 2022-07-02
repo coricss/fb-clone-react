@@ -13,9 +13,9 @@ const AppNavbar = () => (
           <a class="react-logo" href="#">
             <img src={logo} alt="React" className={styles.ReactLogo} />
           </a>
-          <input class="search-input form-control text-white" type="text" placeholder="Search.." name="search" width="900px" />
+          <input class="search-input form-control text-white" type="text" placeholder="Search.." name="search" width="900px" autoComplete="off"/>
         </div>
-        <div class="text-white d-none  d-sm-none d-md-none d-lg-flex">
+        <div class="text-white d-none d-sm-none d-md-none d-lg-flex">
           <div class="nav-items rounded d-flex align-items-center mx-1">
             <i class='bx bxs-home fs-3 px-5 py-2'></i>
           </div>
