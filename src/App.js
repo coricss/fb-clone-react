@@ -1,6 +1,16 @@
 import './App.css';
 
 function App() {
+  // var profileHidden = document.querySelector('.profile-hidden');
+  // var sticky =  profileHidden.offsetTop;
+
+  // window.onscroll = function myFunction() {
+  //   if (window.pageYOffset >= sticky) {
+  //     profileHidden.classList.add("sticky");
+  //   } else {
+  //     profileHidden.classList.remove("sticky");
+  //   }
+  // }
   return (
     <div class="text-white main">
       <div class="profile-banner container">
@@ -128,17 +138,9 @@ function App() {
       </div>
     </div>
   );
+
+  
 }
 
-var profileHidden = document.querySelector('.profile-hidden');
-var sticky =  profileHidden.offsetTop;
-
-window.onscroll = function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    profileHidden.classList.add("sticky");
-  } else {
-    profileHidden.classList.remove("sticky");
-  }
-}
 
 export default App;
