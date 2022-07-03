@@ -1,10 +1,10 @@
 .search-input {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
   outline: none;
   box-shadow: none !important;
   border: none;
   background-color: #585b5e !important;
--webkit-border-radius: 20px;
--moz-border-radius: 20px;
   border-radius: 20px;
 }
 .search-input::placeholder {
@@ -25,6 +25,6 @@
   align-items: center;
   width: 100%;
   height: 100%;
-  padding: 0 20px;
+
   cursor: pointer;
 }

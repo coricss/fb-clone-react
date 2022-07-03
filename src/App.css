@@ -1,38 +1,113 @@
-.App {
-  text-align: center;
+body {
+  background-color: #242526;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main {
+  margin-top: 57px;
+  /* background-color: #444444; */
+  padding-bottom: 20px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.bg-gray {
+  background-color: #242526;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.cover-photo-wrapper {
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  box-sizing: border-box;
+  flex-basis: 0px;
+  position: relative;
+  display: flex;
+  min-width: 0;
+  flex-shrink: 1;
+  z-index: 0;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: center;
+}
+.cover-photo {
+  width: 100%;
+  margin-top: -15%;
+  border-radius: 10px;
+}
+.cover-photo-blur {
+  width: 100%;
+  position: absolute;
+  max-height: 52%;
+  filter: blur(100px);
+  opacity: .7;
+}
+.btn-edit-cover {
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+}
+.profile-container {
+  z-index: 0; 
+  position: relative;
 }
 
-.App-link {
-  color: #61dafb;
-}
+.profile-picture {
+  width: 20%;
+  height: auto;
+  margin-top: -5%;
+  margin-left: 3%;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  border: #242526 3px solid;
+  cursor: pointer;
+}
+.edit-photo {
+  position: absolute;
+  top: 62%;
+  left: 15%;
+  cursor: pointer;
+  background-color: #3f3f3f;
+}
+.friend-pics {
+  border: #242526 2px solid;
+}
+.friend-list {
+  cursor: pointer;
+  margin-right: -9px !important;
+ 
+}
+.friend-list.one {
+  z-index: 8;
+}
+.friend-list.two {
+  z-index: 7;
+}
+.friend-list.three {
+  z-index: 6;
+}
+.friend-list.four {
+  z-index: 5;
+}
+.friend-list.five {
+  z-index: 4;
+}
+.friend-list.six {
+  z-index: 3;
+}
+.friend-list.seven{
+  z-index: 2;
+}
+.friend-list.eight {
+  z-index: 1;
+}
+.btns {
+  position: absolute;
+  right: 5%;
+  bottom: 10%;
+}
+.profile-nav {
+  z-index: 1;
+}
+.bg-gradient {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  z-index: -1;
+  background: linear-gradient(to top, #242526, #242526, #18191ab3, #25262766, #24252600) !important;
+}
+.text-gray {
+  color: #818181;
 }
