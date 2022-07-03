@@ -1,0 +1,78 @@
+.btn-contents:hover {
+  background-color: #3E4042;
+}
+.photo-container {
+  margin-top: 3%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.photos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  width: 600px;
+  grid-gap: .2rem;
+}
+.photo {
+  position: relative;
+  padding-bottom: 100%;
+  cursor: pointer;
+}
+
+.photo img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+.photo img:hover {
+  opacity: 0.6;
+}
+.mini-profile, .post-name, .time-ago, .bx-world, .post-image {
+  cursor: pointer;
+}
+.btn-active {
+  border-radius: 0px;
+  border-bottom: #006dda 3px solid;
+}
+.whats-on-your-mind {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  outline: none;
+  box-shadow: none !important;
+  border: none;
+  background-color: #585b5e !important;
+  border-radius: 20px;
+  height: 45px;
+}
+.write-comment {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  outline: none;
+  box-shadow: none !important;
+  border: none;
+  background-color: #585b5e !important;
+  border-radius: 20px;
+  height: 40px;
+  padding-right: 15%;
+}
+.whats-on-your-mind::placeholder, .write-comment::placeholder {
+  color: #bbbbbb;
+}
+.btn-stickers:hover {
+  background-color: #727272;
+}
+.stickers {
+  position: absolute;
+  right: 2%;
+}
+.side-component {
+  align-self: end;
+  position: sticky;
+  bottom: .1rem;
+}
