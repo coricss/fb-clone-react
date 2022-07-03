@@ -10,14 +10,22 @@
 .search-input::placeholder {
   color: #bbbbbb;
 }
+.btn {
+  outline: none;
+  box-shadow: none !important;
+  border: none;
+}
 .btn-gray {
   background-color: #3E4042;
   outline: none;
   box-shadow: none !important;
   border: none;
 }
-.btn-gray:hover, .nav-items:hover {
+.btn-gray:hover {
   background-color: #585b5e;
+}
+.nav-items:hover {
+  background-color: #3E4042;
 }
 .nav-items {
   display: flex;
@@ -25,6 +33,8 @@
   align-items: center;
   width: 100%;
   height: 100%;
-
+  cursor: pointer;
+}
+.nav-items-active {
   cursor: pointer;
 }

@@ -28,6 +28,9 @@ const AppNavbar = () => (
           <div class="nav-items rounded d-flex align-items-center mx-1">
             <i class='bx bxs-group fs-3 px-5 py-2' ></i>
           </div> 
+          <div class="nav-items rounded d-flex align-items-center mx-1">
+            <i class='bx bxs-flag-alt fs-3 px-5 py-2' ></i>
+          </div> 
         </div>
         <div class="d-flex">
           <a class="text-decoration-none" href="#">

@@ -7,6 +7,7 @@ import 'react-bootstrap/dist/react-bootstrap.min.js';
 import 'boxicons/css/boxicons.min.css';
 import App from './App';
 import AppNavbar from './AppNavbar/AppNavbar';
+import AppContent from './AppContent/AppContent';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -14,6 +15,7 @@ root.render(
   <React.StrictMode>
     <AppNavbar />
     <App />
+    <AppContent />
   </React.StrictMode>
 );
 
