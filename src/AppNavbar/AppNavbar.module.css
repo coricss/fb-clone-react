@@ -1,5 +1,10 @@
 .AppNavbar {
   background-color: #242424;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
 }
 .ReactLogo {
   width: 70px;
