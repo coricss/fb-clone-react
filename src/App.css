@@ -3,8 +3,6 @@ body {
 }
 .main {
   margin-top: 57px;
-  /* background-color: #444444; */
-  padding-bottom: 20px;
 }
 .bg-gray {
   background-color: #242526;
@@ -26,6 +24,7 @@ body {
   width: 100%;
   margin-top: -15%;
   border-radius: 10px;
+  cursor: pointer;
 }
 .cover-photo-blur {
   width: 100%;
@@ -49,7 +48,6 @@ body {
   height: auto;
   margin-top: -5%;
   margin-left: 3%;
-
   border: #242526 3px solid;
   cursor: pointer;
 }
@@ -100,6 +98,9 @@ body {
 .profile-nav {
   z-index: 1;
 }
+.nav-active {
+  border-bottom: #0d6efd 3px solid;
+}
 .bg-gradient {
   position: absolute;
   left: 0;
@@ -110,4 +111,16 @@ body {
 }
 .text-gray {
   color: #818181;
+}
+.profile-hidden {
+  align-self: start;
+  position: sticky;
+  top: 1rem;
+}
+.sticky {
+  position: fixed;
+  top: 5%;
+  z-index: 1;
+  width: 100%;
+  display: block !important;
 }
