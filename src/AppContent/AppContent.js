@@ -79,7 +79,7 @@ const AppContent = () => (
             </div>
             <div class="friend-container">
               <div class="friends">
-                <div class="friend">
+                <div class="friend mx-1">
                   <div class="friend-photo">
                     <img class="rounded" src="https://scontent.fmnl4-2.fna.fbcdn.net/v/t1.6435-9/79515135_10111007623880301_5111576226921709568_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeFaLukDuY4UvshdS2g13yZQQyaNjMnA6N9DJo2MycDo31EQvDgKnenw7HTzBjYugqbmX7hG36og_y33OSQGoCIL&_nc_ohc=x5UfOxi1D1kAX_36de3&_nc_ht=scontent.fmnl4-2.fna&oh=00_AT94lIdULCMNCH7BDZkK44hioYW4yxklZ3eBf2Kd_4BTOw&oe=62E711D6" alt=""/>
                   </div>
@@ -87,7 +87,7 @@ const AppContent = () => (
                     <span class="fw-bold" style={{fontSize: '12px'}}>Mark Zuckerburg</span>
                   </div>
                 </div>
-                <div class="friend">
+                <div class="friend mx-1">
                   <div class="friend-photo">
                     <img class="rounded" src="https://mettisglobal.news/wp-content/uploads/2021/02/IMG5410Elon-musk.jpg" alt=""/>
                   </div>
@@ -95,7 +95,7 @@ const AppContent = () => (
                     <span class="fw-bold" style={{fontSize: '12px'}}>Elon Musk</span>
                   </div>
                 </div>
-                <div class="friend">
+                <div class="friend mx-1">
                   <div class="friend-photo">
                     <img class="rounded" src="https://pbs.twimg.com/profile_images/1520776623972356097/DKttTgse_400x400.jpg" alt=""/>
                   </div>
@@ -103,7 +103,7 @@ const AppContent = () => (
                     <span class="fw-bold" style={{fontSize: '12px'}}>Changpeng Zhao</span>
                   </div>
                 </div>
-                <div class="friend">
+                <div class="friend mx-1">
                   <div class="friend-photo">
                     <img class="rounded" src="https://scontent.fmnl4-2.fna.fbcdn.net/v/t39.30808-1/274054035_502374894586781_4269170301085168965_n.jpg?stp=c146.85.794.794a_dst-jpg_s160x160&_nc_cat=1&ccb=1-7&_nc_sid=c6021c&_nc_eui2=AeG3nOfXhJnGp_zCyHsvc5_2_Wf7S1TEJ0P9Z_tLVMQnQ4yyHlJdbO44hf_JHVgADL6rlxdf86gjxazpdKm9wfKM&_nc_ohc=hzcmWhsHMmoAX-kfGO3&_nc_ht=scontent.fmnl4-2.fna&oh=00_AT9VVTHH_SFrbH_4l66AfrWaMoyv9Yjo6EaXFrSVKuG7mA&oe=62C776B1" alt=""/>
                   </div>
@@ -111,7 +111,7 @@ const AppContent = () => (
                     <span class="fw-bold" style={{fontSize: '12px'}}>Bill Gates</span>
                   </div>
                 </div>
-                <div class="friend">
+                <div class="friend mx-1">
                   <div class="friend-photo">
                     <img class="rounded" src="https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cg_face%2Cq_auto:good%2Cw_300/MTc5ODc2NTUzODU1ODcwOTY1/gettyimages-83414114.jpg" alt=""/>
                   </div>
@@ -119,7 +119,7 @@ const AppContent = () => (
                     <span class="fw-bold" style={{fontSize: '12px'}}>Larry Page</span>
                   </div>
                 </div>
-                <div class="friend">
+                <div class="friend mx-1">
                   <div class="friend-photo">
                     <img class="rounded" src="https://pbs.twimg.com/profile_images/825622525342199809/_iAaSUQf_400x400.jpg" alt=""/>
                   </div>
@@ -127,7 +127,7 @@ const AppContent = () => (
                     <span class="fw-bold" style={{fontSize: '12px'}}>Patrick Collison</span>
                   </div>
                 </div>
-                <div class="friend">
+                <div class="friend mx-1">
                   <div class="friend-photo">
                     <img class="rounded" src="https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cg_face%2Cq_auto:good%2Cw_300/MTgwMjk3MDM3ODY1MDM1NjI4/gettyimages-847438962-copy.jpg" alt=""/>
                   </div>
@@ -135,7 +135,7 @@ const AppContent = () => (
                     <span class="fw-bold" style={{fontSize: '12px'}}>Markus Persson</span>
                   </div>
                 </div>
-                <div class="friend">
+                <div class="friend mx-1">
                   <div class="friend-photo">
                     <img class="rounded" src="https://scontent.fmnl4-2.fna.fbcdn.net/v/t1.6435-9/100968975_10157934214820033_9031535398433587200_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=JrJhiizk1jwAX_3qfW0&_nc_ht=scontent.fmnl4-2.fna&oh=00_AT_TnAsQjx_36hX1ERWWd6gWWuGthLb6eX9f187Re7O6pA&oe=62E8297E" alt=""/>
                   </div>
@@ -143,7 +143,7 @@ const AppContent = () => (
                     <span class="fw-bold" style={{fontSize: '12px'}}>Jack Ma</span>
                   </div>
                 </div>
-                <div class="friend">
+                <div class="friend mx-1">
                   <div class="friend-photo">
                     <img class="rounded" src="https://scontent.fmnl4-2.fna.fbcdn.net/v/t1.6435-9/169668637_155606523116836_7757732769327022547_n.png?_nc_cat=101&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeFo6p31hmoSx3vw3yPlew4O8TwhNCSp1ivxPCE0JKnWK7eMfEppaqHwWQliA-FT7eHcHU2ARNS6wkuxQ_5zjLpI&_nc_ohc=gou5DOl4mP8AX9ruDg8&_nc_ht=scontent.fmnl4-2.fna&oh=00_AT9qGZ1MrFDnypxo1VladnguDodB6ara3ntlTj9iua_uKQ&oe=62E86067" alt=""/>
                   </div>
