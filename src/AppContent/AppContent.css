@@ -1,7 +1,7 @@
 .btn-contents:hover {
   background-color: #3E4042;
 }
-.photo-container {
+.photo-container, .friend-container {
   margin-top: 3%;
   display: flex;
   align-items: center;
@@ -14,12 +14,29 @@
   width: 600px;
   grid-gap: .2rem;
 }
+.friends {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  width: 500px;
+  grid-gap: .1rem;
+}
 .photo {
   position: relative;
   padding-bottom: 100%;
   cursor: pointer;
 }
-
+.friend {
+  position: relative;
+  cursor: pointer;
+}
+.friend-name {
+  margin-bottom: 8%;
+}
+.friend-photo img {
+  width: 150px;
+  height: 150px;
+}
 .photo img {
   height: 100%;
   width: 100%;
@@ -72,7 +89,22 @@
   right: 2%;
 }
 .side-component {
-  align-self: end;
+  align-self: start;
   position: sticky;
   bottom: .1rem;
+}
+
+@media screen and (max-width: 3560px) {
+  .side-component {
+    align-self: end;
+    position: sticky;
+    bottom: .1rem;
+  }
+}
+@media screen and (min-width: 3000px) {
+  .side-component {
+    align-self: start;
+    position: sticky;
+    top: 3.5rem;
+  }
 }
