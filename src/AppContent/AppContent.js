@@ -3,6 +3,60 @@ import PropTypes from 'prop-types';
 import styles from './AppContent.module.css';
 import './AppContent.css';
 
+class AppLike extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isLiked: false,
+    };
+  }
+
+  handleClick = () => {
+    this.setState({
+      isLiked: !this.state.isLiked,
+    });
+  }
+
+  render() {
+    return (
+      <li class="mx-2" onClick={this.handleClick}>
+        <b class={this.state.isLiked ? 'text-primary':'text-muted'}>Like</b>
+      </li>
+    );
+  }
+}
+class AppComment extends React.Component {
+  render() {
+    return (
+      <div class="mx-3">
+        <div class="d-flex">
+          <div class="mt-2">
+            <img class="mini-profile rounded-circle" width="35px" src={this.props.photo} alt=""/>
+          </div>
+          <div class="mt-2 mx-2">
+            <div class="comment-wrapper px-3 py-2">
+              <p class="m-0 commentor">{this.props.commentor}</p>
+              <p class="m-0 comment">{this.props.comment}</p>
+            </div>
+            <ul class="d-flex list-unstyled m-0 text-gray comment-react px-2">
+              <AppLike/>
+              <li class="mx-2">
+                <b>Reply</b>
+              </li>
+              <li class="mx-2">
+                <b>Share</b>
+              </li>
+              <li class="mx-2">
+                <span>{this.props.timeAgo}</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
+
 const AppContent = () => (
   <div className={styles.AppContent} data-testid="AppContent">
     <div class="container text-white">
@@ -77,6 +131,7 @@ const AppContent = () => (
               <h4 class="fw-bold">Friends</h4>
               <button class="btn btn-contents text-primary">See all friends</button>
             </div>
+            <span class="text-gray">1,022 friends</span>
             <div class="friend-container">
               <div class="friends">
                 <div class="friend mx-1">
@@ -249,8 +304,26 @@ const AppContent = () => (
               </button>
             </div>
             <hr class="mx-3 mt-0"></hr>
-            <div class="d-flex align-items-center justify-content-between mx-3 position-relative">
-              <img class="mini-profile rounded-circle" width="30px" src="https://i.ibb.co/xmz3ggp/1646411370269.jpg" alt=""/>
+            <AppComment
+              photo="https://scontent.fmnl4-2.fna.fbcdn.net/v/t1.6435-9/79515135_10111007623880301_5111576226921709568_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeFaLukDuY4UvshdS2g13yZQQyaNjMnA6N9DJo2MycDo31EQvDgKnenw7HTzBjYugqbmX7hG36og_y33OSQGoCIL&_nc_ohc=x5UfOxi1D1kAX_36de3&_nc_ht=scontent.fmnl4-2.fna&oh=00_AT94lIdULCMNCH7BDZkK44hioYW4yxklZ3eBf2Kd_4BTOw&oe=62E711D6" 
+              commentor="Mark Zuck" 
+              comment="goods yan lods"
+              timeAgo="2d"
+            />
+            <AppComment
+              photo="https://mettisglobal.news/wp-content/uploads/2021/02/IMG5410Elon-musk.jpg" 
+              commentor="Elon Musk" 
+              comment="hack mo nga fb ko?"
+              timeAgo="1h"
+            />
+            <AppComment 
+              photo="https://scontent.fmnl4-2.fna.fbcdn.net/v/t1.6435-9/169668637_155606523116836_7757732769327022547_n.png?_nc_cat=101&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeFo6p31hmoSx3vw3yPlew4O8TwhNCSp1ivxPCE0JKnWK7eMfEppaqHwWQliA-FT7eHcHU2ARNS6wkuxQ_5zjLpI&_nc_ohc=gou5DOl4mP8AX9ruDg8&_nc_ht=scontent.fmnl4-2.fna&oh=00_AT9qGZ1MrFDnypxo1VladnguDodB6ara3ntlTj9iua_uKQ&oe=62E86067" 
+              commentor="KodeGo" 
+              comment="bigyan ng work yan!"
+              timeAgo="3m"
+            />
+            <div class="d-flex align-items-center justify-content-between mt-3 mx-3 position-relative">
+              <img class="mini-profile rounded-circle" width="35px" src="https://i.ibb.co/xmz3ggp/1646411370269.jpg" alt=""/>
               <input class="form-control w-100 mx-2 text-white write-comment" type="text" placeholder="Write a comment..."/>
               <div class="d-flex align-items-center stickers">
                 <button class="btn btn-stickers rounded-circle d-flex align-items-center justify-content-center p-2">
@@ -305,7 +378,7 @@ const AppContent = () => (
             </div>
             <hr class="mx-3 mt-0"></hr>
             <div class="d-flex align-items-center justify-content-between mx-3 position-relative">
-              <img class="mini-profile rounded-circle" width="30px" src="https://i.ibb.co/xmz3ggp/1646411370269.jpg" alt=""/>
+              <img class="mini-profile rounded-circle" width="35px" src="https://i.ibb.co/xmz3ggp/1646411370269.jpg" alt=""/>
               <input class="form-control w-100 mx-2 text-white write-comment" type="text" placeholder="Write a comment..."/>
               <div class="d-flex align-items-center stickers">
                 <button class="btn btn-stickers rounded-circle d-flex align-items-center justify-content-center p-2">
@@ -360,7 +433,7 @@ const AppContent = () => (
             </div>
             <hr class="mx-3 mt-0"></hr>
             <div class="d-flex align-items-center justify-content-between mx-3 position-relative">
-              <img class="mini-profile rounded-circle" width="30px" src="https://i.ibb.co/xmz3ggp/1646411370269.jpg" alt=""/>
+              <img class="mini-profile rounded-circle" width="35px" src="https://i.ibb.co/xmz3ggp/1646411370269.jpg" alt=""/>
               <input class="form-control w-100 mx-2 text-white write-comment" type="text" placeholder="Write a comment..."/>
               <div class="d-flex align-items-center stickers">
                 <button class="btn btn-stickers rounded-circle d-flex align-items-center justify-content-center p-2">
@@ -415,7 +488,7 @@ const AppContent = () => (
             </div>
             <hr class="mx-3 mt-0"></hr>
             <div class="d-flex align-items-center justify-content-between mx-3 position-relative">
-              <img class="mini-profile rounded-circle" width="30px" src="https://i.ibb.co/xmz3ggp/1646411370269.jpg" alt=""/>
+              <img class="mini-profile rounded-circle" width="35px" src="https://i.ibb.co/xmz3ggp/1646411370269.jpg" alt=""/>
               <input class="form-control w-100 mx-2 text-white write-comment" type="text" placeholder="Write a comment..."/>
               <div class="d-flex align-items-center stickers">
                 <button class="btn btn-stickers rounded-circle d-flex align-items-center justify-content-center p-2">
@@ -470,7 +543,7 @@ const AppContent = () => (
             </div>
             <hr class="mx-3 mt-0"></hr>
             <div class="d-flex align-items-center justify-content-between mx-3 position-relative">
-              <img class="mini-profile rounded-circle" width="30px" src="https://i.ibb.co/xmz3ggp/1646411370269.jpg" alt=""/>
+              <img class="mini-profile rounded-circle" width="35px" src="https://i.ibb.co/xmz3ggp/1646411370269.jpg" alt=""/>
               <input class="form-control w-100 mx-2 text-white write-comment" type="text" placeholder="Write a comment..."/>
               <div class="d-flex align-items-center stickers">
                 <button class="btn btn-stickers rounded-circle d-flex align-items-center justify-content-center p-2">
@@ -520,7 +593,7 @@ const AppContent = () => (
             </div>
             <hr class="mx-3 mt-0"></hr>
             <div class="d-flex align-items-center justify-content-between mx-3 position-relative">
-              <img class="mini-profile rounded-circle" width="30px" src="https://i.ibb.co/xmz3ggp/1646411370269.jpg" alt=""/>
+              <img class="mini-profile rounded-circle" width="35px" src="https://i.ibb.co/xmz3ggp/1646411370269.jpg" alt=""/>
               <input class="form-control w-100 mx-2 text-white write-comment" type="text" placeholder="Write a comment..."/>
               <div class="d-flex align-items-center stickers">
                 <button class="btn btn-stickers rounded-circle d-flex align-items-center justify-content-center p-2">
@@ -570,7 +643,7 @@ const AppContent = () => (
             </div>
             <hr class="mx-3 mt-0"></hr>
             <div class="d-flex align-items-center justify-content-between mx-3 position-relative">
-              <img class="mini-profile rounded-circle" width="30px" src="https://i.ibb.co/xmz3ggp/1646411370269.jpg" alt=""/>
+              <img class="mini-profile rounded-circle" width="35px" src="https://i.ibb.co/xmz3ggp/1646411370269.jpg" alt=""/>
               <input class="form-control w-100 mx-2 text-white write-comment" type="text" placeholder="Write a comment..."/>
               <div class="d-flex align-items-center stickers">
                 <button class="btn btn-stickers rounded-circle d-flex align-items-center justify-content-center p-2">

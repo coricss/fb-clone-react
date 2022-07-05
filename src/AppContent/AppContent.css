@@ -63,23 +63,44 @@
   outline: none;
   box-shadow: none !important;
   border: none;
-  background-color: #585b5e !important;
+  background-color: #3E4042 !important;
   border-radius: 20px;
   height: 45px;
 }
 .write-comment {
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
+  
   outline: none;
   box-shadow: none !important;
   border: none;
-  background-color: #585b5e !important;
+  background-color: #3E4042 !important;
   border-radius: 20px;
   height: 40px;
   padding-right: 15%;
 }
 .whats-on-your-mind::placeholder, .write-comment::placeholder {
   color: #bbbbbb;
+}
+.comment-wrapper {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  outline: none;
+  box-shadow: none !important;
+  border: none;
+  background-color: #3E4042 !important;
+  border-radius: 20px;
+  width: fit-content;
+}
+.commentor {
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 14px;
+}
+.comment{
+  font-size: 14px;
+}
+.comment-react li {
+  font-size: 12px;
+  cursor: pointer;
 }
 .btn-stickers:hover {
   background-color: #727272;
