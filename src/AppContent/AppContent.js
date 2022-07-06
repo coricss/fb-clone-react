@@ -10,7 +10,7 @@ class AppLike extends React.Component {
       isLiked: false,
     };
   }
-
+  //LIKE
   handleClick = () => {
     this.setState({
       isLiked: !this.state.isLiked,
@@ -18,14 +18,65 @@ class AppLike extends React.Component {
   }
 
   render() {
-    return (
+    return(
       <li class="mx-2" onClick={this.handleClick}>
         <b class={this.state.isLiked ? 'text-primary':'text-muted'}>Like</b>
       </li>
-    );
+    )
   }
 }
+class AppReplyForm extends React.Component {
+ 
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: this.props.author
+    };
+  }
+
+  changeHandle = (e) => {
+    this.setState({
+      name: e.target.value
+    });
+  }
+
+  render(){
+    return(
+      <div class="d-flex align-items-center justify-content-between my-2 position-relative reply-wrapper">
+        <img class="mini-profile rounded-circle" width="25px" src="https://i.ibb.co/xmz3ggp/1646411370269.jpg" alt=""/>
+        <input class="form-control w-100 mx-2 text-white write-comment" type="text" value={this.state.name+''} onChange={this.changeHandle} placeholder="Write a reply..." autoFocus />
+        <div class="d-flex align-items-center stickers">
+          <button class="btn btn-stickers rounded-circle d-flex align-items-center justify-content-center p-2">
+            <i class='bx bx-smile text-light' ></i>
+          </button>
+          <button class="btn btn-stickers rounded-circle d-flex align-items-center justify-content-center p-2">
+            <i class='bx bx-camera text-light' ></i>
+          </button>
+          <button class="btn btn-stickers rounded-circle d-flex align-items-center justify-content-center p-2">
+            <i class='bx bx-sticker text-light' ></i>
+          </button>
+        </div>
+      </div>
+    )
+  }
+}
+
+
 class AppComment extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isReplied: false,
+      name: this.props.commentor
+    };
+  }
+  //REPLY
+  clickReply = () => {
+    this.setState({
+      isReplied: !this.state.isReplied
+    });
+  }
+
   render() {
     return (
       <div class="mx-3">
@@ -39,8 +90,8 @@ class AppComment extends React.Component {
               <p class="m-0 comment">{this.props.comment}</p>
             </div>
             <ul class="d-flex list-unstyled m-0 text-gray comment-react px-2">
-              <AppLike/>
-              <li class="mx-2">
+              <AppLike commentor="rcs"/>
+              <li class="mx-2" onClick={this.clickReply}>
                 <b>Reply</b>
               </li>
               <li class="mx-2">
@@ -52,6 +103,7 @@ class AppComment extends React.Component {
             </ul>
           </div>
         </div>
+        {this.state.isReplied ? <AppReplyForm author={this.state.name}/> : null}
       </div>
     );
   }
@@ -306,7 +358,7 @@ const AppContent = () => (
             <hr class="mx-3 mt-0"></hr>
             <AppComment
               photo="https://scontent.fmnl4-2.fna.fbcdn.net/v/t1.6435-9/79515135_10111007623880301_5111576226921709568_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeFaLukDuY4UvshdS2g13yZQQyaNjMnA6N9DJo2MycDo31EQvDgKnenw7HTzBjYugqbmX7hG36og_y33OSQGoCIL&_nc_ohc=x5UfOxi1D1kAX_36de3&_nc_ht=scontent.fmnl4-2.fna&oh=00_AT94lIdULCMNCH7BDZkK44hioYW4yxklZ3eBf2Kd_4BTOw&oe=62E711D6" 
-              commentor="Mark Zuck" 
+              commentor="Mark Zuckerburg" 
               comment="goods yan lods"
               timeAgo="2d"
             />

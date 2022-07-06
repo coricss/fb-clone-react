@@ -114,6 +114,9 @@
   position: sticky;
   bottom: .1rem;
 }
+.reply-wrapper {
+  margin-left: 60px;
+}
 
 @media screen and (max-width: 3560px) {
   .side-component {
