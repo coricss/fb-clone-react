@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/react-static-portfolio/static/css/main.9d7122d9.css",
-    "main.js": "/react-static-portfolio/static/js/main.d4b40a74.js",
+    "main.css": "/react-static-portfolio/static/css/main.3c2303f9.css",
+    "main.js": "/react-static-portfolio/static/js/main.be5a8662.js",
     "static/js/787.cac73804.chunk.js": "/react-static-portfolio/static/js/787.cac73804.chunk.js",
     "static/media/boxicons.svg": "/react-static-portfolio/static/media/boxicons.0153fb5e5b5f697b4bcc.svg",
     "static/media/boxicons.eot": "/react-static-portfolio/static/media/boxicons.21f7c5dd64d88e1fc666.eot",
@@ -10,12 +10,12 @@
     "static/media/boxicons.woff2": "/react-static-portfolio/static/media/boxicons.0335b427967c56248ea6.woff2",
     "static/media/logo.svg": "/react-static-portfolio/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/react-static-portfolio/index.html",
-    "main.9d7122d9.css.map": "/react-static-portfolio/static/css/main.9d7122d9.css.map",
-    "main.d4b40a74.js.map": "/react-static-portfolio/static/js/main.d4b40a74.js.map",
+    "main.3c2303f9.css.map": "/react-static-portfolio/static/css/main.3c2303f9.css.map",
+    "main.be5a8662.js.map": "/react-static-portfolio/static/js/main.be5a8662.js.map",
     "787.cac73804.chunk.js.map": "/react-static-portfolio/static/js/787.cac73804.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9d7122d9.css",
-    "static/js/main.d4b40a74.js"
+    "static/css/main.3c2303f9.css",
+    "static/js/main.be5a8662.js"
   ]
 }
