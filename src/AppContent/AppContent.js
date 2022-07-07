@@ -73,7 +73,7 @@ class AppComment extends React.Component {
   //REPLY
   clickReply = () => {
     this.setState({
-      isReplied: !this.state.isReplied
+      isReplied: true
     });
   }
 
