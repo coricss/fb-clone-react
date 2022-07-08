@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import styles from './AppContent.module.css';
 import './AppContent.css';
 
+//LIKE
+//USAGE OF STATE
 class AppLike extends React.Component {
   constructor(props) {
     super(props);
@@ -25,6 +27,87 @@ class AppLike extends React.Component {
     )
   }
 }
+
+//MENTION 
+//LIST RENDERING
+class Mention extends React.Component {
+
+  people = [
+    {
+      name: 'Bill Gates',
+      avatar: 'https://scontent.fmnl25-2.fna.fbcdn.net/v/t39.30808-6/274054035_502374894586781_4269170301085168965_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=2tgthsLJ5RcAX-vs_Bm&_nc_ht=scontent.fmnl25-2.fna&oh=00_AT-A914Ofi8Iq6OeKoCXoMzhEXfjJ9CzQfccrcDGlR5g4Q&oe=62CD0037',
+      mutualFriends: '200'
+    },
+    {
+      name: 'Changpeng Zhao',
+      avatar: 'https://pbs.twimg.com/profile_images/1520776623972356097/DKttTgse_400x400.jpg',
+      mutualFriends: '140'
+    },
+    {
+      name: 'Elon Musk',
+      avatar: 'https://mettisglobal.news/wp-content/uploads/2021/02/IMG5410Elon-musk.jpg',
+      mutualFriends: '310'
+    },
+    {
+      name: 'Jack Ma',
+      avatar: 'https://scontent.fmnl4-2.fna.fbcdn.net/v/t1.6435-9/100968975_10157934214820033_9031535398433587200_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=JrJhiizk1jwAX_3qfW0&_nc_ht=scontent.fmnl4-2.fna&oh=00_AT_TnAsQjx_36hX1ERWWd6gWWuGthLb6eX9f187Re7O6pA&oe=62E8297E',
+      mutualFriends: '290'
+    }
+  ];
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: this.props.author
+    };
+    this.wrapperRef = React.createRef();
+    this.handleClickOutside = this.handleClickOutside.bind(this);
+  }
+
+  mentionPeople = () => {
+    this.peopleArr = this.people.map((person) => 
+      (
+        <div class="d-flex align-items-center gap-2 p-2 rounded mentioned-person">
+          <div>
+            <img class="mini-profile rounded-circle" width="35px" src={person.avatar} alt=""/>
+          </div>
+          <div> 
+            <p class="m-0 commentor">{person.name}</p>
+            <small class="text-muted">Friend · {person.mutualFriends} mutual friends</small>
+          </div>
+        </div>
+      )
+    );
+    return this.peopleArr;
+  }
+
+  componentDidMount() {
+    document.addEventListener("mousedown", this.handleClickOutside);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener("mousedown", this.handleClickOutside);
+  }
+
+  handleClickOutside(event) {
+    if (this.wrapperRef && !this.wrapperRef.current.contains(event.target)) {
+      this.wrapperRef.current.classList.add('d-none');
+    }
+  }
+
+  render(){
+    //LIST RENDERING
+    this.mentionPeople();
+    return(
+      <div class="mx-5 bg-gray w-50 rounded metioned-wrapper" ref={this.wrapperRef}>
+        {this.peopleArr}
+      </div>
+    )
+  }
+}
+
+//REPLY FORM
+//USAGE OF STATE
 class AppReplyForm extends React.Component {
  
   constructor(props) {
@@ -40,28 +123,36 @@ class AppReplyForm extends React.Component {
     });
   }
 
+
   render(){
     return(
-      <div class="d-flex align-items-center justify-content-between my-2 position-relative reply-wrapper">
-        <img class="mini-profile rounded-circle" width="25px" src="https://i.ibb.co/xmz3ggp/1646411370269.jpg" alt=""/>
-        <input class="form-control w-100 mx-2 text-white write-comment" type="text" value={this.state.name+''} onChange={this.changeHandle} placeholder="Write a reply..." autoFocus />
-        <div class="d-flex align-items-center stickers">
-          <button class="btn btn-stickers rounded-circle d-flex align-items-center justify-content-center p-2">
-            <i class='bx bx-smile text-light' ></i>
-          </button>
-          <button class="btn btn-stickers rounded-circle d-flex align-items-center justify-content-center p-2">
-            <i class='bx bx-camera text-light' ></i>
-          </button>
-          <button class="btn btn-stickers rounded-circle d-flex align-items-center justify-content-center p-2">
-            <i class='bx bx-sticker text-light' ></i>
-          </button>
+      <div class="reply-container">
+        <div class="d-flex align-items-center justify-content-between my-2 position-relative reply-wrapper">
+          <img class="mini-profile rounded-circle" width="25px" src="https://i.ibb.co/xmz3ggp/1646411370269.jpg" alt=""/>
+          <input class="form-control w-100 mx-2 text-white write-comment" type="text" value={this.state.name+''} onChange={this.changeHandle} placeholder="Write a reply..." autoFocus />
+          <div class="d-flex align-items-center stickers">
+            <button class="btn btn-stickers rounded-circle d-flex align-items-center justify-content-center p-2">
+              <i class='bx bx-smile text-light' ></i>
+            </button>
+            <button class="btn btn-stickers rounded-circle d-flex align-items-center justify-content-center p-2">
+              <i class='bx bx-camera text-light' ></i>
+            </button>
+            <button class="btn btn-stickers rounded-circle d-flex align-items-center justify-content-center p-2">
+              <i class='bx bx-sticker text-light' ></i>
+            </button>
+          </div>
         </div>
+        {
+          //SAMPLE OF CONDITIONAL RENDERING
+          this.state.name.match('@') ? <Mention/> : null
+        }
       </div>
     )
   }
 }
 
-
+//COMMENTS
+//USAGE OF PROPS
 class AppComment extends React.Component {
   constructor(props) {
     super(props);
@@ -191,7 +282,7 @@ const AppContent = () => (
                     <img class="rounded" src="https://scontent.fmnl4-2.fna.fbcdn.net/v/t1.6435-9/79515135_10111007623880301_5111576226921709568_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeFaLukDuY4UvshdS2g13yZQQyaNjMnA6N9DJo2MycDo31EQvDgKnenw7HTzBjYugqbmX7hG36og_y33OSQGoCIL&_nc_ohc=x5UfOxi1D1kAX_36de3&_nc_ht=scontent.fmnl4-2.fna&oh=00_AT94lIdULCMNCH7BDZkK44hioYW4yxklZ3eBf2Kd_4BTOw&oe=62E711D6" alt=""/>
                   </div>
                   <div class="friend-name">
-                    <span class="fw-bold" style={{fontSize: '12px'}}>Mark Zuckerburg</span>
+                    <span class="fw-bold" style={{fontSize: '12px'}}>Mark Zuckerberg</span>
                   </div>
                 </div>
                 <div class="friend mx-1">
@@ -212,7 +303,7 @@ const AppContent = () => (
                 </div>
                 <div class="friend mx-1">
                   <div class="friend-photo">
-                    <img class="rounded" src="https://scontent.fmnl4-2.fna.fbcdn.net/v/t39.30808-1/274054035_502374894586781_4269170301085168965_n.jpg?stp=c146.85.794.794a_dst-jpg_s160x160&_nc_cat=1&ccb=1-7&_nc_sid=c6021c&_nc_eui2=AeG3nOfXhJnGp_zCyHsvc5_2_Wf7S1TEJ0P9Z_tLVMQnQ4yyHlJdbO44hf_JHVgADL6rlxdf86gjxazpdKm9wfKM&_nc_ohc=hzcmWhsHMmoAX-kfGO3&_nc_ht=scontent.fmnl4-2.fna&oh=00_AT9VVTHH_SFrbH_4l66AfrWaMoyv9Yjo6EaXFrSVKuG7mA&oe=62C776B1" alt=""/>
+                    <img class="rounded" src="https://scontent.fmnl25-2.fna.fbcdn.net/v/t39.30808-6/274054035_502374894586781_4269170301085168965_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=2tgthsLJ5RcAX-vs_Bm&_nc_ht=scontent.fmnl25-2.fna&oh=00_AT-A914Ofi8Iq6OeKoCXoMzhEXfjJ9CzQfccrcDGlR5g4Q&oe=62CD0037" alt=""/>
                   </div>
                   <div class="friend-name">
                     <span class="fw-bold" style={{fontSize: '12px'}}>Bill Gates</span>
@@ -358,7 +449,7 @@ const AppContent = () => (
             <hr class="mx-3 mt-0"></hr>
             <AppComment
               photo="https://scontent.fmnl4-2.fna.fbcdn.net/v/t1.6435-9/79515135_10111007623880301_5111576226921709568_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeFaLukDuY4UvshdS2g13yZQQyaNjMnA6N9DJo2MycDo31EQvDgKnenw7HTzBjYugqbmX7hG36og_y33OSQGoCIL&_nc_ohc=x5UfOxi1D1kAX_36de3&_nc_ht=scontent.fmnl4-2.fna&oh=00_AT94lIdULCMNCH7BDZkK44hioYW4yxklZ3eBf2Kd_4BTOw&oe=62E711D6" 
-              commentor="Mark Zuckerburg" 
+              commentor="Mark Zuckerberg" 
               comment="goods yan lods"
               timeAgo="2d"
             />
