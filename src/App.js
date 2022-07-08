@@ -5,10 +5,10 @@ function App() {
     <div class="text-white main">
       <div class="profile-banner container">
         <div class="bg-gradient">
-          <img class="cover-photo-blur" src="https://scontent.fmnl4-2.fna.fbcdn.net/v/t39.30808-6/281760244_131735369478281_4675034444981101912_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=e3f864&_nc_eui2=AeF1ll85t2Uai6nJNHQsdN9JhLUEPCjNO6WEtQQ8KM07pbnBlBOwIgxz-2yfjVYF-HZsFKHMQsb4TOg1jm6IJgem&_nc_ohc=e9p5g0RUQxgAX_24w2h&_nc_ht=scontent.fmnl4-2.fna&oh=00_AT_VO1xA4YWfnA5WOBhZeZ8-KrSrRw4tcWsKHATEZB1NSw&oe=62C5E834"  alt=""/>
+          <img class="cover-photo-blur" src="https://picsum.photos/id/13/1000/500"  alt=""/>
         </div>
         <div class="cover-photo-wrapper">
-          <img class="cover-photo" src="https://scontent.fmnl4-2.fna.fbcdn.net/v/t39.30808-6/281760244_131735369478281_4675034444981101912_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=e3f864&_nc_eui2=AeF1ll85t2Uai6nJNHQsdN9JhLUEPCjNO6WEtQQ8KM07pbnBlBOwIgxz-2yfjVYF-HZsFKHMQsb4TOg1jm6IJgem&_nc_ohc=e9p5g0RUQxgAX_24w2h&_nc_ht=scontent.fmnl4-2.fna&oh=00_AT_VO1xA4YWfnA5WOBhZeZ8-KrSrRw4tcWsKHATEZB1NSw&oe=62C5E834"  alt=""/>
+          <img class="cover-photo" src="https://picsum.photos/id/13/1000/500"  alt=""/>
           <button class="btn btn-light btn-edit-cover d-flex align-items-center"> 
             <i class='bx bxs-camera fs-5' ></i>
             <span class="mx-2">Edit cover photo</span>
