@@ -664,11 +664,11 @@ const AppContent = () => (
             </div>
             <div clas="caption">
               <p class="text-light px-3">
-                I like <b>sharing memes about programming</b>.
+                Magkakalaptop din ako.
               </p>
             </div>
             <div class="post-image-container">
-              <img class="post-image w-100" src="https://scontent.fmnl4-4.fna.fbcdn.net/v/t39.30808-6/289221232_5349129861774928_7677296607988641186_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=a26aad&_nc_eui2=AeEE1g4753_DbbOHmUrDeQwGjY4DRgnNXwyNjgNGCc1fDGdcKm0PoBQpQeXvTaP5JYnti7iJ3oAcP3xMwpCDvytE&_nc_ohc=8RI9pO--X48AX-4Xx1-&tn=qhp73JiY-9OuOXvt&_nc_ht=scontent.fmnl4-4.fna&oh=00_AT-54V9hBUwfLvLfW8be5iPBxLXyblqb_hxHGgtE33h8nw&oe=62C6C9D6" alt=""/>
+              <img class="post-image w-100" src="https://picsum.photos/id/2/1000/800" alt=""/>
             </div>
             <div class="reaction d-flex align-items-center px-3 py-1">
               <button class="btn btn-contents text-white w-50 d-flex align-items-center justify-content-center">
@@ -718,7 +718,7 @@ const AppContent = () => (
               </button>
             </div>
             <div class="post-image-container">
-              <img class="post-image w-100" src="https://scontent.fmnl4-6.fna.fbcdn.net/v/t39.30808-6/288270619_5160173327364837_4394928560467246637_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeF24Kor-G9ym6UfvSZwRestjIFygQAPjB-MgXKBAA-MH5qTWXptwQOsKIKkSe0VsD5SnLrt3fP5n4s_-9NXXl2m&_nc_ohc=-27CkWgGUQUAX9eyyLe&_nc_ht=scontent.fmnl4-6.fna&oh=00_AT9gAFiAQ1_FwAluRj3-DJXmNq7C4cmj-rR74rvbnL-TFQ&oe=62C711E3" alt=""/>
+              <img class="post-image w-100" src="https://picsum.photos/id/5/1000/800" alt=""/>
             </div>
             <div class="reaction d-flex align-items-center px-3 py-1">
               <button class="btn btn-contents text-white w-50 d-flex align-items-center justify-content-center">
@@ -767,8 +767,13 @@ const AppContent = () => (
                 <i class='bx bx-dots-horizontal-rounded py-1' ></i>
               </button>
             </div>
+            <div clas="caption">
+              <p class="text-light px-3">
+                Magiging web developer din ako.
+              </p>
+            </div>
             <div class="post-image-container">
-              <img class="post-image w-100" src="https://scontent.fmnl4-2.fna.fbcdn.net/v/t39.30808-6/279491783_5017427878306050_3752025031884579350_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeH_rcyPLpchIDtOKRdk35XXb1lrjNta3YJvWWuM21rdgr5uub2c5ROCWirarTARjml9cJlgR0qI3ReYX9IDFFcS&_nc_ohc=vkc4-xsJjcQAX_kh7ri&_nc_ht=scontent.fmnl4-2.fna&oh=00_AT874UXZ-9xKsTrPnIIRFkCjJPOwUrePeb1AV0WFEgNl8Q&oe=62C708A6" alt=""/>
+              <img class="post-image w-100" src="https://picsum.photos/id/60/1000/800" alt=""/>
             </div>
             <div class="reaction d-flex align-items-center px-3 py-1">
               <button class="btn btn-contents text-white w-50 d-flex align-items-center justify-content-center">
