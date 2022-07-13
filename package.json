@@ -1,8 +1,8 @@
 {
-  "name": "react-static-portfolio",
+  "name": "fb-clone-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://coricss.github.io/react-static-portfolio/",
+  "homepage": "https://coricss.github.io/fb-clone-react/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
