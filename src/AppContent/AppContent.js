@@ -35,7 +35,7 @@ class Mention extends React.Component {
   people = [
     {
       name: 'Bill Gates',
-      avatar: 'https://scontent.fmnl25-2.fna.fbcdn.net/v/t39.30808-6/274054035_502374894586781_4269170301085168965_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=2tgthsLJ5RcAX-vs_Bm&_nc_ht=scontent.fmnl25-2.fna&oh=00_AT-A914Ofi8Iq6OeKoCXoMzhEXfjJ9CzQfccrcDGlR5g4Q&oe=62CD0037',
+      avatar: 'https://i1.wp.com/moneynation.com/wp-content/uploads/2015/03/bill-gates-billionaire-dropout-e1427330213769.jpg?ssl=1',
       mutualFriends: '200'
     },
     {
@@ -303,7 +303,7 @@ const AppContent = () => (
                 </div>
                 <div class="friend mx-1">
                   <div class="friend-photo">
-                    <img class="rounded" src="https://scontent.fmnl25-2.fna.fbcdn.net/v/t39.30808-6/274054035_502374894586781_4269170301085168965_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=2tgthsLJ5RcAX-vs_Bm&_nc_ht=scontent.fmnl25-2.fna&oh=00_AT-A914Ofi8Iq6OeKoCXoMzhEXfjJ9CzQfccrcDGlR5g4Q&oe=62CD0037" alt=""/>
+                    <img class="rounded" src="https://i1.wp.com/moneynation.com/wp-content/uploads/2015/03/bill-gates-billionaire-dropout-e1427330213769.jpg?ssl=1" alt=""/>
                   </div>
                   <div class="friend-name">
                     <span class="fw-bold" style={{fontSize: '12px'}}>Bill Gates</span>
