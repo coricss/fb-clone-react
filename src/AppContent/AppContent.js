@@ -215,7 +215,7 @@ const AppContent = () => (
             </button>
             <div class="d-flex align-items-center mb-3">
               <i class='bx bxs-graduation fs-4'></i>
-              <span class="mx-2">Studies Bachelor of Science in Information Technology at <a class="fw-bold text-white text-decoration-none" href="#">City College of Calamba</a></span>
+              <span class="mx-2">Studied Bachelor of Science in Information Technology at <a class="fw-bold text-white text-decoration-none" href="#">City College of Calamba</a></span>
             </div>
             <div class="d-flex align-items-center my-3">
               <i class='bx bxs-home fs-4'></i>
