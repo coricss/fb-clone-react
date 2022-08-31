@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 import styles from './AppContent.module.css';
 import './AppContent.css';
 
+import mark from '../imgs/mark-zuck.png';
+import jackma from '../imgs/jack-ma.png';
+import kodego from '../imgs/kodego.png';
 //LIKE
 //USAGE OF STATE
 class AppLike extends React.Component {
@@ -50,7 +53,7 @@ class Mention extends React.Component {
     },
     {
       name: 'Jack Ma',
-      avatar: 'https://scontent.fmnl4-2.fna.fbcdn.net/v/t1.6435-9/100968975_10157934214820033_9031535398433587200_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=JrJhiizk1jwAX_3qfW0&_nc_ht=scontent.fmnl4-2.fna&oh=00_AT_TnAsQjx_36hX1ERWWd6gWWuGthLb6eX9f187Re7O6pA&oe=62E8297E',
+      avatar: jackma,
       mutualFriends: '290'
     }
   ];
@@ -279,7 +282,7 @@ const AppContent = () => (
               <div class="friends">
                 <div class="friend mx-1">
                   <div class="friend-photo">
-                    <img class="rounded" src="https://scontent.fmnl4-2.fna.fbcdn.net/v/t1.6435-9/79515135_10111007623880301_5111576226921709568_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeFaLukDuY4UvshdS2g13yZQQyaNjMnA6N9DJo2MycDo31EQvDgKnenw7HTzBjYugqbmX7hG36og_y33OSQGoCIL&_nc_ohc=x5UfOxi1D1kAX_36de3&_nc_ht=scontent.fmnl4-2.fna&oh=00_AT94lIdULCMNCH7BDZkK44hioYW4yxklZ3eBf2Kd_4BTOw&oe=62E711D6" alt=""/>
+                    <img class="rounded" src={mark} alt=""/>
                   </div>
                   <div class="friend-name">
                     <span class="fw-bold" style={{fontSize: '12px'}}>Mark Zuckerberg</span>
@@ -335,7 +338,7 @@ const AppContent = () => (
                 </div>
                 <div class="friend mx-1">
                   <div class="friend-photo">
-                    <img class="rounded" src="https://scontent.fmnl4-2.fna.fbcdn.net/v/t1.6435-9/100968975_10157934214820033_9031535398433587200_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=JrJhiizk1jwAX_3qfW0&_nc_ht=scontent.fmnl4-2.fna&oh=00_AT_TnAsQjx_36hX1ERWWd6gWWuGthLb6eX9f187Re7O6pA&oe=62E8297E" alt=""/>
+                    <img class="rounded" src={jackma} alt=""/>
                   </div>
                   <div class="friend-name">
                     <span class="fw-bold" style={{fontSize: '12px'}}>Jack Ma</span>
@@ -343,7 +346,7 @@ const AppContent = () => (
                 </div>
                 <div class="friend mx-1">
                   <div class="friend-photo">
-                    <img class="rounded" src="https://scontent.fmnl4-2.fna.fbcdn.net/v/t1.6435-9/169668637_155606523116836_7757732769327022547_n.png?_nc_cat=101&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeFo6p31hmoSx3vw3yPlew4O8TwhNCSp1ivxPCE0JKnWK7eMfEppaqHwWQliA-FT7eHcHU2ARNS6wkuxQ_5zjLpI&_nc_ohc=gou5DOl4mP8AX9ruDg8&_nc_ht=scontent.fmnl4-2.fna&oh=00_AT9qGZ1MrFDnypxo1VladnguDodB6ara3ntlTj9iua_uKQ&oe=62E86067" alt=""/>
+                    <img class="rounded" src={kodego} alt=""/>
                   </div>
                   <div class="friend-name">
                     <span class="fw-bold" style={{fontSize: '12px'}}>KodeGo</span>
@@ -448,7 +451,7 @@ const AppContent = () => (
             </div>
             <hr class="mx-3 mt-0"></hr>
             <AppComment
-              photo="https://scontent.fmnl4-2.fna.fbcdn.net/v/t1.6435-9/79515135_10111007623880301_5111576226921709568_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeFaLukDuY4UvshdS2g13yZQQyaNjMnA6N9DJo2MycDo31EQvDgKnenw7HTzBjYugqbmX7hG36og_y33OSQGoCIL&_nc_ohc=x5UfOxi1D1kAX_36de3&_nc_ht=scontent.fmnl4-2.fna&oh=00_AT94lIdULCMNCH7BDZkK44hioYW4yxklZ3eBf2Kd_4BTOw&oe=62E711D6" 
+              photo={mark} 
               commentor="Mark Zuckerberg" 
               comment="goods yan lods"
               timeAgo="2d"
@@ -460,7 +463,7 @@ const AppContent = () => (
               timeAgo="1h"
             />
             <AppComment 
-              photo="https://scontent.fmnl4-2.fna.fbcdn.net/v/t1.6435-9/169668637_155606523116836_7757732769327022547_n.png?_nc_cat=101&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeFo6p31hmoSx3vw3yPlew4O8TwhNCSp1ivxPCE0JKnWK7eMfEppaqHwWQliA-FT7eHcHU2ARNS6wkuxQ_5zjLpI&_nc_ohc=gou5DOl4mP8AX9ruDg8&_nc_ht=scontent.fmnl4-2.fna&oh=00_AT9qGZ1MrFDnypxo1VladnguDodB6ara3ntlTj9iua_uKQ&oe=62E86067" 
+              photo={kodego}
               commentor="KodeGo" 
               comment="bigyan ng work yan!"
               timeAgo="3m"

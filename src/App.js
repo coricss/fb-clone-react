@@ -1,5 +1,10 @@
 import './App.css';
 
+import coverphoto from './imgs/cover-photo.png';
+import mark from './imgs/mark-zuck.png';
+import jackma from './imgs/jack-ma.png';
+import kodego from './imgs/kodego.png';
+
 function App() {
   return (
     <div class="text-white main">
@@ -8,7 +13,7 @@ function App() {
           <img class="cover-photo-blur" src="https://picsum.photos/id/13/1000/500"  alt=""/>
         </div>
         <div class="cover-photo-wrapper">
-          <img class="cover-photo" src="https://picsum.photos/id/13/1000/500"  alt=""/>
+          <img class="cover-photo" src={coverphoto} alt=""/>
           <button class="btn btn-light btn-edit-cover d-flex align-items-center"> 
             <i class='bx bxs-camera fs-5' ></i>
             <span class="mx-2">Edit cover photo</span>
@@ -27,7 +32,7 @@ function App() {
                   <h5 class="text-gray">1K friends</h5>
                   <ul class="d-flex list-unstyled">
                     <li class="m-0 friend-list one">
-                      <img class="friend-pics rounded-circle" width="40px" src="https://scontent.fmnl4-2.fna.fbcdn.net/v/t1.6435-9/79515135_10111007623880301_5111576226921709568_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeFaLukDuY4UvshdS2g13yZQQyaNjMnA6N9DJo2MycDo31EQvDgKnenw7HTzBjYugqbmX7hG36og_y33OSQGoCIL&_nc_ohc=x5UfOxi1D1kAX_36de3&_nc_ht=scontent.fmnl4-2.fna&oh=00_AT94lIdULCMNCH7BDZkK44hioYW4yxklZ3eBf2Kd_4BTOw&oe=62E711D6" alt="" />
+                      <img class="friend-pics rounded-circle" width="40px" src={mark} alt="" />
                     </li>
                     <li class="m-0 friend-list two">
                       <img class="friend-pics rounded-circle" width="40px" src="https://mettisglobal.news/wp-content/uploads/2021/02/IMG5410Elon-musk.jpg" alt="" />
@@ -48,7 +53,10 @@ function App() {
                       <img class="friend-pics rounded-circle" width="40px" src="https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cg_face%2Cq_auto:good%2Cw_300/MTgwMjk3MDM3ODY1MDM1NjI4/gettyimages-847438962-copy.jpg" alt="" />
                     </li>
                     <li class="m-0 friend-list eight">
-                      <img class="friend-pics rounded-circle" width="40px" src="https://scontent.fmnl4-2.fna.fbcdn.net/v/t1.6435-9/169668637_155606523116836_7757732769327022547_n.png?_nc_cat=101&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeFo6p31hmoSx3vw3yPlew4O8TwhNCSp1ivxPCE0JKnWK7eMfEppaqHwWQliA-FT7eHcHU2ARNS6wkuxQ_5zjLpI&_nc_ohc=gou5DOl4mP8AX9ruDg8&_nc_ht=scontent.fmnl4-2.fna&oh=00_AT9qGZ1MrFDnypxo1VladnguDodB6ara3ntlTj9iua_uKQ&oe=62E86067" alt="" />
+                      <img class="friend-pics rounded-circle" width="40px" src={jackma} alt="" />
+                    </li>
+                    <li class="m-0 friend-list nine">
+                      <img class="friend-pics rounded-circle" width="40px" src={kodego} alt="" />
                     </li>
                   </ul>
                 </div>
